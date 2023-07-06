@@ -89,6 +89,8 @@ metadata:
   labels:
     app: usermgmt-restapp
   annotations:
+    # leave it if you want to create one lb for multiples apis
+    alb.ingress.kubernetes.io/group.name: external-api-access
     # Ingress Core Settings
     kubernetes.io/ingress.class: "alb"
     alb.ingress.kubernetes.io/scheme: internet-facing
